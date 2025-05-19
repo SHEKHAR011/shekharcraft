@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-8 md:mb-0">
-            <h3 className="text-xl font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              ShekharCraft
+            <h3 className="text-l font-bold mb-2 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              ShekharCrafts
             </h3>
             <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               Building digital experiences that matter.
@@ -58,19 +58,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            © {currentYear} ShekharCraft. All rights reserved.
-          </p>
-          <div className="mt-4 md:mt-0">
-            <a 
-              href="#" 
-              className={`text-sm hover:text-blue-500 transition-colors ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}
-            >
-              Privacy Policy
-            </a>
-          </div>
-        </div>
+        
+        
       </div>
     </footer>
   );
