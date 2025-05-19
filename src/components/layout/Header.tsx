@@ -47,7 +47,7 @@ const Header: React.FC = () => {
         >
           <a href="#home" className="text-xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              ShekharCraft
+              ShekharCraftssss
             </span>
           </a>
         </motion.div>
