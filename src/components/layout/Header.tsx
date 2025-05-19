@@ -45,7 +45,7 @@ const Header: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center"
         >
-          <a href="#home" className="text-2xl font-bold tracking-tight">
+          <a href="#home" className="text-xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
               ShekharCraft
             </span>
