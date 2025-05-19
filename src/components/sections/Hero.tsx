@@ -1,65 +1,98 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Smartphone, Code2 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 
 const Hero: React.FC = () => {
   const { isDarkMode } = useTheme();
 
   return (
-    <section 
-      id="home" 
-      className={`relative min-h-screen flex items-center ${
+    <section
+      id="home"
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${
         isDarkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-white to-gray-50'
       }`}
     >
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {isDarkMode && (
-          <>
-            <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 blur-3xl"></div>
-            <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-gradient-to-r from-teal-500/10 to-blue-500/10 blur-3xl"></div>
-          </>
-        )}
-      </div>
+      {/* Subtle Floating Circles */}
+      <div className="absolute w-[300px] h-[300px] rounded-full bg-blue-500/10 blur-3xl top-10 left-10 z-0 animate-pulse" />
+      <div className="absolute w-[250px] h-[250px] rounded-full bg-purple-500/10 blur-3xl bottom-10 right-10 z-0 animate-pulse" />
 
+      {/* Icons floating */}
+      <motion.div
+        className="absolute top-20 right-20 text-blue-400/40"
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0] }}
+        transition={{ repeat: Infinity, duration: 4 }}
+      >
+        <Smartphone size={40} />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-20 left-20 text-purple-400/40"
+        initial={{ y: 0 }}
+        animate={{ y: [-10, 0, -10] }}
+        transition={{ repeat: Infinity, duration: 4 }}
+      >
+        <Code2 size={40} />
+      </motion.div>
+
+      {/* Content */}
       <div className="container mx-auto px-6 pt-32 pb-16 relative z-10">
-        <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+            },
+          }}
+          className="max-w-5xl mx-auto text-center"
+        >
+          {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mb-6"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="mb-6"
           >
-            <span className="text-sm md:text-base px-4 py-2 rounded-full bg-blue-500/10 text-blue-500 dark:text-blue-400 inline-block mb-6">
+            <span className="text-sm md:text-base px-4 py-2 rounded-full bg-blue-500/10 text-blue-500 dark:text-blue-400 inline-block">
               Android Developer
             </span>
           </motion.div>
 
+          {/* Heading */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-center mb-6 leading-tight tracking-tight"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight mb-6"
           >
-            Building <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Android apps</span> that matter
+            Building{' '}
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+              Android apps that matter
+            </span>
           </motion.h1>
 
+          {/* Subtext */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className={`text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 ${
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className={`text-lg md:text-xl max-w-3xl mx-auto mb-12 ${
               isDarkMode ? 'text-gray-400' : 'text-gray-600'
             }`}
           >
             I'm a passionate Android developer creating native mobile applications with a focus on user experience and performance.
           </motion.p>
 
+          {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
@@ -79,15 +112,18 @@ const Hero: React.FC = () => {
               Contact Me
             </a>
           </motion.div>
-        </div>
+        </motion.div>
 
+        {/* Scroll Down */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2, repeat: Infinity, repeatType: "reverse" }}
+          initial={{ y: 0 }}
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         >
-          <span className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Scroll down</span>
+          <span className={`text-sm mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            Scroll down
+          </span>
           <ArrowDown className={isDarkMode ? 'text-gray-400' : 'text-gray-600'} size={20} />
         </motion.div>
       </div>
