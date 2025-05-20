@@ -1,4 +1,7 @@
-import ScreenShot from '../assets/ScreenShot.png';
+import ScreenShot1 from '../assets/ScreenShot1.png';
+import ScreenShot3 from '../assets/ScreenShot3.png';
+import ScreenShot4 from '../assets/ScreenShot4.png';
+import image from '../assets/image.png';
 export interface Project {
   id: number;
   title: string;
@@ -14,42 +17,42 @@ export interface Project {
 export const projectData: Project[] = 
 [{
     id: 1,
-    title: 'Music Streaming App with dsfdsfdsfdsfDezzer',
+    title: 'Music Streaming App with Dezzer',
     description: 'Complete visual identity redesign for a travel agency, including logo, website, and marketing materials.',
-    image: 'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: image,
     category: 'mobile',
     technologies: ['Native Android', 'Dezzer Api', 'Picasso','Glide','Material UI','Json Converter'],
-    github: 'htsdadsffdsfd',
+    github: 'https://github.com/SHEKHAR011/Music-Streaming-App.git',
     // liveUrl: '#'
   },
   {
     id: 2,
     title: 'Smart Traffic Light Simulation',
     description: 'A dynamic and realistic simulation of a 4-way Indian intersection using Python and Pygame! This project demonstrates a traffic light system with roundabout logic, phase cycling, and vehicles that obey signals.',
-    image: ScreenShot, 
+    image: ScreenShot1, 
     category: 'CLI',
     technologies: ['Python', 'Pygame'],
-    github: 'https://github.com/SHEKHAR011/Traffic-light-system',
+    github: 'https://github.com/SHEKHAR011/Traffic-light-system.git',
     //liveUrl: '#'
   },
   {
     id: 3,
     title: 'Discord Bot with Gemini Integration',
     description: 'A versatile Discord bot powered by Python and the Gemini API, offering conversational AI features for smart automation and engaging real-time interactions.',
-    image: 'https://images.pexels.com/photos/3927410/pexels-photo-3927410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: ScreenShot3,
     category: 'mobile',
     technologies: ['Discord','Python', 'Gemini Api', 'CLI','dotenv'],
-    github: 'https://github.com/SHEKHAR011/Discord-Bot',
+    github: 'https://github.com/SHEKHAR011/Discord-Bot.git',
     
   },
   {
     id: 4,
     title: 'Adventure Game',
     description: 'If Elif Else Adventure Game in Python',
-    image: 'https://images.pexels.com/photos/7567460/pexels-photo-7567460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    image: ScreenShot4,
     category: 'CLI',
     technologies: ['Python'],
-    github: 'https://github.com/SHEKHAR011/Adventure-Game',
+    github: 'https://github.com/SHEKHAR011/Adventure-Game.git',
     
   },
   
