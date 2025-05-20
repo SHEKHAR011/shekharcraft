@@ -8,7 +8,7 @@ export interface Project {
   technologies: string[];
   github?: string;
   liveUrl?: string;
-    
+
 }
 
 export const projectData: Project[] = 
