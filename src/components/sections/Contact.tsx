@@ -53,12 +53,12 @@ const Contact: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold mb-1">Email</h4>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:shekharsingh.dev@gmail.com"
                 className={`hover:text-blue-500 transition-colors ${
                   isDarkMode ? 'text-gray-300' : 'text-gray-700'
                 }`}
               >
-                hello@example.com
+                shekharsingh.dev@gmail.com
               </a>
             </div>
           </motion.div>
