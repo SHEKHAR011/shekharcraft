@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 
                 
                 <a 
-                  href="mailto:hello@example.com" 
+                  href="mailto:shekharsingh.dev@gmail.com" 
                   className={`hover:text-blue-500 transition-colors ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}
                   aria-label="Email"
                 >
