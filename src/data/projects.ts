@@ -50,6 +50,7 @@ export const projectData: Project[] =
     image: 'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'mobile',
     technologies: ['Native Android', 'Dezzer Api', 'Picasso','Glide','Material UI','Json Converter'],
+    github:'',
     // liveUrl: '#'
   },
   // {
