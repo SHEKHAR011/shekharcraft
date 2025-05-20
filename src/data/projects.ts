@@ -14,7 +14,7 @@ export interface Project {
 export const projectData: Project[] = 
 [{
     id: 1,
-    title: 'Music Streaming App with Dezzer',
+    title: 'Music Streaming App with dsfdsfdsfdsfDezzer',
     description: 'Complete visual identity redesign for a travel agency, including logo, website, and marketing materials.',
     image: 'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     category: 'mobile',
