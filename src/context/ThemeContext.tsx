@@ -3,18 +3,22 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 type ThemeContextType = {
   isDarkMode: boolean;
   toggleTheme: () => void;
+  enableDarkMode: () => void;
+  enableLightMode: () => void;
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Initialize with false (light mode) or from localStorage if exists
+  // Default to dark mode (true) unless user explicitly chose light mode
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme === 'dark' : false; // Default to light mode
+    // If no preference saved, default to dark (true)
+    return savedTheme ? savedTheme === 'dark' : true;
   });
 
   useEffect(() => {
+    // Apply the theme class to document element
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -22,14 +26,25 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
+    
+    // Force disable any system preference detection
+    document.documentElement.style.colorScheme = isDarkMode ? 'dark' : 'light';
   }, [isDarkMode]);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
   };
 
+  const enableDarkMode = () => {
+    setIsDarkMode(true);
+  };
+
+  const enableLightMode = () => {
+    setIsDarkMode(false);
+  };
+
   return (
-    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme, enableDarkMode, enableLightMode }}>
       {children}
     </ThemeContext.Provider>
   );
