@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
     threshold: 0.1,
   });
 
-  const filters = ['all', 'web', 'mobile', 'CLI'];
+  const filters = ['all', 'AI', 'mobile', 'CLI'];
 
   // Filter projects based on activeFilter
   const filteredProjects = activeFilter === 'all' 

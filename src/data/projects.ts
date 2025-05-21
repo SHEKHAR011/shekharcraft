@@ -7,7 +7,7 @@ export interface Project {
   title: string;
   description: string;
   image: string;
-  category: 'web' | 'mobile' |'CLI';
+  category: 'AI' | 'mobile' |'CLI';
   technologies: string[];
   github?: string;
   liveUrl?: string;
@@ -18,7 +18,7 @@ export const projectData: Project[] =
 [{
     id: 1,
     title: 'Music Streaming App with Dezzer',
-    description: 'Complete visual identity redesign for a travel agency, including logo, website, and marketing materials.',
+    description: 'Complete visual identity redesign for a travel agency, including logo, AIsite, and marketing materials.',
     image: image,
     category: 'mobile',
     technologies: ['Native Android', 'Dezzer Api', 'Picasso','Glide','Material UI','Json Converter'],
@@ -40,7 +40,7 @@ export const projectData: Project[] =
     title: 'Discord Bot with Gemini Integration',
     description: 'A versatile Discord bot powered by Python and the Gemini API, offering conversational AI features for smart automation and engaging real-time interactions.',
     image: ScreenShot3,
-    category: 'mobile',
+    category: 'AI',
     technologies: ['Discord','Python', 'Gemini Api', 'CLI','dotenv'],
     github: 'https://github.com/SHEKHAR011/Discord-Bot.git',
     
@@ -59,9 +59,9 @@ export const projectData: Project[] =
   // {
   //   id: 5,
   //   title: 'Real Estate Listing Platform',
-  //   description: 'Web platform for real estate listings with advanced search, filtering, and interactive property maps.',
+  //   description: 'AI platform for real estate listings with advanced search, filtering, and interactive property maps.',
   //   image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  //   category: 'web',
+  //   category: 'AI',
   //   technologies: ['React', 'Next.js', 'GraphQL', 'MongoDB', 'MapBox'],
   //   github: '#',
   //   liveUrl: '#'
@@ -72,7 +72,7 @@ export const projectData: Project[] =
   //   description: 'Mobile-first social platform for connecting professionals in creative industries with messaging and event features.',
   //   image: 'https://images.pexels.com/photos/267389/pexels-photo-267389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
   //   category: 'mobile',
-  //   technologies: ['React Native', 'Firebase', 'Redux', 'WebRTC'],
+  //   technologies: ['React Native', 'Firebase', 'Redux', 'AIRTC'],
   //   github: '#',
   //   liveUrl: '#'
   // }
