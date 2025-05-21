@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-xl font-bold">{project.title}</h3>
           <span className={`text-xs px-3 py-1 rounded-full ${
-            project.category === 'web' 
+            project.category === 'AI' 
               ? 'bg-blue-500/10 text-blue-500'
               : project.category === 'mobile'
                 ? 'bg-green-500/10 text-green-500'
