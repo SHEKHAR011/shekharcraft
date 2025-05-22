@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
                   initial="hidden"
                   animate="visible"
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.01, delay: index * 0.0}}
+                  transition={{ duration: 0.1, delay: index * 0.0}}
                 >
                   <ProjectCard project={project} />
                 </motion.div>
