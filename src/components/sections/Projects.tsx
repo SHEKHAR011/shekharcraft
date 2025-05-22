@@ -91,10 +91,10 @@ const Projects: React.FC = () => {
               aria-label={`Filter projects by ${filter}`}
               aria-pressed={activeFilter === filter}
               className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 ${activeFilter === filter
-                  ? 'bg-blue-500 text-white shadow-lg'
-                  : isDarkMode
-                    ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                    : 'bg-white text-gray-700 hover:bg-gray-100'
+                ? 'bg-blue-500 text-white shadow-lg'
+                : isDarkMode
+                  ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  : 'bg-white text-gray-700 hover:bg-gray-100'
                 }`}
             >
               {filter.charAt(0).toUpperCase() + filter.slice(1)}
@@ -129,7 +129,9 @@ const Projects: React.FC = () => {
                   initial="hidden"
                   animate="visible"
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.1, delay: index * 0.0}}
+                 transition={{ duration: 0.2, delay: index * 0.1 }}
+
+
                 >
                   <ProjectCard project={project} />
                 </motion.div>
