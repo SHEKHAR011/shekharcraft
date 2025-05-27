@@ -20,8 +20,8 @@ export const skillsData: SkillCategory[] = [
     color: 'bg-blue-500',
     skills: [
       { name: 'C++', level: 90 },
-      { name: 'Python', level: 85 },
-      { name: 'Kotlin', level: 88 },
+      { name: 'Python', level: 70 },
+      { name: 'Kotlin', level: 85 },
     ]
   },
   {

@@ -145,7 +145,7 @@ const Hero: React.FC = () => {
           >
             Building{' '}
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Android apps that matter
+              Mobile apps that matter
             </span>
           </motion.h1>
 
