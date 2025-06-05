@@ -134,7 +134,7 @@ const Hero: React.FC = () => {
               >
                 <Sparkles size={16} />
               </motion.span>
-              Fresher Android Developer
+              Android Developer
             </motion.span>
           </motion.div>
 

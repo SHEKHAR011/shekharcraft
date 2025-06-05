@@ -94,7 +94,7 @@ const About: React.FC = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Experience</h4>
                   <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Fresher Android Developer
+                    Fresher
                   </p>
                 </div>
               </div>
